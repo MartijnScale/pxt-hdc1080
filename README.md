@@ -33,8 +33,9 @@ The HDC1080 sensor uses I2C to communicate with the micro:bit. The following con
 |SCL|SCL (GPIO 19)|
 |SDA|SDA (GPIO 20)|
 
-(I used the simple CJMCU-8118 breakout board, on which the HDC1080 and a CCS811 sensor are mounted. For this board, the remaining pins (INT, RST and ADD) are not connected).
+(I used the simple CJMCU-8118 breakout board, on which the HDC1080 and a CCS811 sensor are mounted. For this board, the remaining pins (INT, RST, ADD and WAK) are not connected. If you want to use this breakout board with the CCS811 sensor as well, then the WAK pin should be connected according the descirption for the CCS811 extension).
 
+For a description of the CCS811 extension, go to https://martijnscale.github.io/pxt-ccs811/
 
 #### Metadata (used for search, rendering)
 
