@@ -29,13 +29,13 @@ namespace HDC1080 {
     }
 
     //% block="Device ID"
-    function getDeviceID() {
+    export function getDeviceID() {
         command(chipAddress, HDC1080_DEV_ID)
         return getResponse(chipAddress)
     }
 
     //% block="Serial ID"
-    function getSerialID() {
+    export function getSerialID() {
         command(chipAddress, HDC1080_SER_FIRST)
         let first = getResponse(chipAddress)
         command(chipAddress, HDC1080_SER_MID)
@@ -47,7 +47,7 @@ namespace HDC1080 {
     }
 
     //% block="Get Temperature"
-    function getTemp() {
+    export function getTemp() {
         command(chipAddress, HDC1080_TEMP)
         basic.pause(100)                                 //100 ms for measurement to complete
         let tempRaw = getResponse(chipAddress)
@@ -56,7 +56,7 @@ namespace HDC1080 {
     }
 
     //% block="Get Humidity"
-    function getHumid() {
+    export function getHumid() {
         command(chipAddress, HDC1080_HUMID)
         basic.pause(100)                                 //10 ms for measurement to complete
         let humidRaw = getResponse(chipAddress)
